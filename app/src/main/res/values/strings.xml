@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MoneyBox</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="stocks_button">Stocks &amp; Shares ISA</string>
+    <string name="general_button">General Investment Account</string>
+    <string name="add_button">Add £10 to my moneybox</string>
+    <string name="empty_hint" />
+    <string name="login_failed">Failed. Please try again</string>
+    <string name="welcome_text">Welcome, %1$s</string>
+    <string name="your_money">Your moneybox: %1$s</string>
+</resources>

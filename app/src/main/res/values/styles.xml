@@ -1,0 +1,88 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="WrapWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="fragmentGeneric" parent="MatchMatch">
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:animateLayoutChanges">true</item>
+    </style>
+
+    <style name="loginGeneric" parent="MatchWrap">
+        <item name="android:paddingLeft">@dimen/standard_padding</item>
+        <item name="android:paddingRight">@dimen/standard_padding</item>
+        <item name="android:layout_marginTop">@dimen/standard_margin</item>
+        <item name="android:layout_marginBottom">@dimen/standard_margin</item>
+    </style>
+
+    <style name="loginText" parent="loginGeneric">
+        <item name="android:textSize">@dimen/login_text</item>
+        <item name="android:textColor">@color/textLogin</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="loginEntry" parent="loginGeneric">
+        <item name="android:layout_height">@dimen/login_entry_height</item>
+        <item name="android:background">@drawable/login_entry_bg</item>
+        <item name="android:textSize">@dimen/login_entry</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:textColor">@color/textStandard</item>
+        <item name="android:layout_marginLeft">@dimen/standard_padding</item>
+        <item name="android:layout_marginRight">@dimen/standard_padding</item>
+    </style>
+
+    <style name="loginButton" parent="loginGeneric">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@drawable/login_button</item>
+        <item name="android:textSize">@dimen/login_button_text</item>
+        <item name="android:textColor">@color/textLoginButton</item>
+        <item name="android:text">@string/login_button</item>
+        <item name="android:fontFamily">serif-monospace</item>
+        <item name="android:layout_marginTop">@dimen/big_padding</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="accountButton" parent="WrapWrap">
+        <item name="android:textSize">@dimen/account_button_text</item>
+        <item name="android:background">@drawable/product_button</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:padding">@dimen/standard_margin</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    
+    <style name="accountText" parent="loginGeneric">
+        <item name="android:layout_marginTop">@dimen/big_margin</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/account_welcome_text</item>
+        <item name="android:textColor">@color/textStandard</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

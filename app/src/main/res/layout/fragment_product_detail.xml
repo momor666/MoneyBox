@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/fragmentGeneric"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/moneyBox_text"
+        style="@style/accountText"
+        />
+
+    <Button
+        android:id="@+id/add_money_button"
+        style="@style/accountButton"
+        android:text="@string/add_button"
+        android:textSize="@dimen/login_text"
+        />
+
+</RelativeLayout>
