@@ -58,7 +58,7 @@ public class CurrentUser {
     }
 
     /**
-     * @return Replaysubject which when subscribed to, will publish the most recently selected product
+     * @return ReplaySubject which when subscribed to, will publish the most recently selected product
      * on the {@link com.example.haroldhibari.moneybox.fragment.AccountFragment} screen
      */
     @NonNull
@@ -67,7 +67,7 @@ public class CurrentUser {
     }
 
     /**
-     * @return Publishsubject which will notify the fragment that the session has ended for this user.
+     * @return PublishSubject which will notify the fragment that the session has ended for this user.
      */
     @NonNull
     public PublishSubject<Boolean> getSessionEnded() {

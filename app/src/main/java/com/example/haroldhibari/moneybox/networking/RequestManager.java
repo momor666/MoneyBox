@@ -5,7 +5,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.example.haroldhibari.moneybox.jsonhandler.ResponseHandler;
 import com.example.haroldhibari.moneybox.object.CurrentUser;
@@ -27,7 +26,6 @@ import okhttp3.ResponseBody;
  */
 public class RequestManager {
 
-    @NonNull private static final String TAG             =    RequestManager.class.getSimpleName();
     @NonNull private static final String baseUrl         =    "https://api-test00.moneyboxapp.com";
     @NonNull private static String apiVersion            =    "3.0.0";
     @NonNull private static String appVersion            =    "4.11.0";
@@ -180,16 +178,10 @@ public class RequestManager {
                                          @NonNull String secondKey){
         return Observable.create(observable -> uploadObs(context, request, firstKey, secondKey)
                 .concatWith(downloadObs(context)
-                        .doOnComplete(() ->{    if(CurrentUser.getInstance().getSelectedProduct().getValue() != null){
-                            CurrentUser.getInstance().getSelectedProduct().onNext(CurrentUser.getInstance().getSelectedProduct().getValue());
-                            Log.e("WORK", String.valueOf(CurrentUser.getInstance().getSelectedProduct().getValue().getMoneyBox()));
-                        }
-                            Log.e(TAG,CurrentUser.getInstance().toString());
+                        .doOnComplete(() ->{
                             if(!observable.isDisposed()) observable.onComplete();
                 }))
                 .doOnNext(str -> {
-                    Log.e(TAG, str);
-                    Log.e(TAG, String.valueOf(success(str)));
                     ResponseHandler.saveUserInfo(str);
                     observable.onNext(success(str));
                 })

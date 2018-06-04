@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 
 import com.example.haroldhibari.moneybox.R;
@@ -54,10 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     private void setSubscriptions(){
         subscriptions.add(CurrentUser.getInstance().getToolBarTitle()
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(s -> {
-                    Log.e("TITLE", s);
-                    updateToolbarTitle(s);
-                }, Throwable::printStackTrace));
+                .subscribe(this::updateToolbarTitle, Throwable::printStackTrace));
     }
 
     /***
